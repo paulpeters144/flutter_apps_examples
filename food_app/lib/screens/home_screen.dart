@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/data/data.dart';
 import 'package:food_app/modals/restaurant.dart';
+import 'package:food_app/screens/cart_screen.dart';
 import 'package:food_app/screens/resurant_screen.dart';
 import 'package:food_app/widgets/rating_starts.dart';
 import 'package:food_app/widgets/recent_orders.dart';
@@ -41,11 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
-                  child: Image(
-                    height: 150.0,
-                    width: 150.0,
-                    image: AssetImage(
-                      restaurant.imageUrl,
+                  child: Hero(
+                    tag: restaurant.imageUrl,
+                    child: Image(
+                      height: 150.0,
+                      width: 150.0,
+                      image: AssetImage(
+                        restaurant.imageUrl,
+                      ),
                     ),
                   ),
                 ),
@@ -142,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const RecentOrders(),
           Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Text('Nearby Restaurants',
                   style: TextStyle(
@@ -165,7 +169,12 @@ class _HomeScreenState extends State<HomeScreen> {
     );
     return TextButton(
       style: flatButtonStyle,
-      onPressed: () {},
+      onPressed: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => CartScreen(),
+        ),
+      ),
       child: Text(
         text,
         style: const TextStyle(
