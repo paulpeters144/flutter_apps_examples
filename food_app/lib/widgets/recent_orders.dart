@@ -3,7 +3,7 @@ import 'package:food_app/data/data.dart';
 import 'package:food_app/modals/order.dart';
 
 class RecentOrders extends StatelessWidget {
-  const RecentOrders({Key? key}) : super(key: key);
+  const RecentOrders({Key key}) : super(key: key);
 
   _buildRecentOrder(BuildContext context, Order order) {
     return Container(

@@ -7,7 +7,7 @@ import 'package:food_app/widgets/rating_starts.dart';
 import 'package:food_app/widgets/recent_orders.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -162,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  buttonPreview({required String text}) {
+  buttonPreview({String text}) {
     final ButtonStyle flatButtonStyle = TextButton.styleFrom(
       minimumSize: const Size(20, 20),
       padding: const EdgeInsets.all(10),

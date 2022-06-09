@@ -6,8 +6,8 @@ class User {
   final List<Order> cart;
 
   User({
-    required this.name,
-    required this.orders,
-    required this.cart,
+    this.name,
+    this.orders,
+    this.cart,
   });
 }

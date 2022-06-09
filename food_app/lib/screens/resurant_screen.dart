@@ -4,8 +4,7 @@ import 'package:food_app/widgets/rating_starts.dart';
 
 class RestaurantScreen extends StatefulWidget {
   final Restaurant restaurant;
-  const RestaurantScreen({Key? key, required this.restaurant})
-      : super(key: key);
+  const RestaurantScreen({Key key, this.restaurant}) : super(key: key);
 
   @override
   State<RestaurantScreen> createState() => _RestaurantScreen();

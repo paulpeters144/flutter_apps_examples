@@ -8,9 +8,9 @@ class Order {
   final int quantity;
 
   Order({
-    required this.date,
-    required this.restaurant,
-    required this.food,
-    required this.quantity,
+    this.date,
+    this.restaurant,
+    this.food,
+    this.quantity,
   });
 }
